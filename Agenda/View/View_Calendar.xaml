@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="agenda.View.View_Calendar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:agenda.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="395" d:DesignWidth="595">
+    <Grid Name="Grille_Calendrier">
+
+        <Grid Grid.Row="1" Background="LightBlue">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="4*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Content="Calendrier" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontWeight="Bold"/>
+
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Column="0" Name="Contacts" Content="Contacts" Background="Pink" Margin="10" Click="Contacts_Click"/>
+                <Button Grid.Column="1" Name="Reseaux_sociaux" Content="Réseaux-Sociaux" Background="LightSalmon" Margin="10" Click="Reseaux_sociaux_Click"/>
+                <Button Grid.Column="2" Name="Retour" Content="Retour" Background="Yellow" Margin="10" Click="Retour_Click"/>
+            </Grid>
+            
+            <Calendar Name="calendrier" Grid.Row="1" Grid.Column="0" Margin="10,75,10,75" Background="AliceBlue"/>
+            <DataGrid Name="Data_Calendar" Grid.Row="1" Grid.Column="1" Margin="10" AutoGenerateColumns="True" Background="AliceBlue"/>
+        </Grid>
+    </Grid>
+    
+</UserControl>
